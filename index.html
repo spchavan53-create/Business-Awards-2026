@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101a2a" />
+  <meta name="description" content="Business Award 2026 — recognising growth and celebrating success across Karnataka." />
+  <meta property="og:title" content="Business Award 2026" />
+  <meta property="og:description" content="Celebrating excellence and recognising business leaders across Karnataka." />
+  <meta property="og:type" content="website" />
+  <title>Business Award 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #101a2a;
+      --ink-2: #16253a;
+      --ink-3: #213653;
+      --paper: #f8f5ef;
+      --paper-2: #f1ece3;
+      --gold: #d2a651;
+      --gold-bright: #f1cf83;
+      --muted: #7d8796;
+      --line: rgba(16, 26, 42, 0.13);
+      --white-line: rgba(255, 255, 255, 0.16);
+      --shadow: 0 22px 60px rgba(16, 26, 42, 0.12);
+      --serif: "DM Serif Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.55; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    img { max-width: 100%; display: block; }
+    ::selection { background: var(--gold); color: var(--ink); }
+
+    .topline { background: var(--gold); color: var(--ink); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-align: center; text-transform: uppercase; padding: 9px 18px; }
+    .site-header { position: sticky; top: 0; z-index: 20; background: rgba(16, 26, 42, 0.92); backdrop-filter: blur(18px); border-bottom: 1px solid var(--white-line); color: white; }
+    .nav-shell { max-width: 1240px; margin: 0 auto; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-mark { width: 37px; height: 37px; display: grid; place-items: center; position: relative; border: 1px solid var(--gold); color: var(--gold-bright); transform: rotate(45deg); }
+    .brand-mark::after { content: ""; width: 14px; height: 14px; border: 1px solid var(--gold-bright); transform: rotate(45deg); }
+    .brand-word { font-size: 0.77rem; letter-spacing: 0.1em; line-height: 1.15; text-transform: uppercase; font-weight: 700; }
+    .brand-word span { display: block; color: var(--gold-bright); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.18em; margin-top: 3px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; font-size: 0.82rem; }
+    .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; transition: color .2s ease; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--gold-bright); }
+    .nav-cta { border: 1px solid var(--gold); color: var(--gold-bright) !important; padding: 9px 14px; }
+    .nav-toggle { display: none; border: 1px solid var(--white-line); color: white; background: transparent; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; }
+
+    .hero { position: relative; overflow: hidden; min-height: 720px; color: white; background: radial-gradient(circle at 76% 36%, rgba(209, 166, 81, 0.22), transparent 20%), radial-gradient(circle at 75% 86%, rgba(41, 72, 111, 0.44), transparent 35%), linear-gradient(128deg, #0c1422 0%, #13243c 56%, #1b324d 100%); }
+    .hero::before { content: ""; position: absolute; inset: 0; opacity: .34; background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(to right, black, transparent 85%); pointer-events: none; }
+    .hero::after { content: ""; position: absolute; width: 70vw; height: 70vw; max-width: 850px; max-height: 850px; border-radius: 50%; border: 1px solid rgba(241, 207, 131, .18); right: -22vw; top: 10%; box-shadow: 0 0 0 32px rgba(241,207,131,.03), 0 0 0 64px rgba(241,207,131,.025); pointer-events: none; }
+    .hero-shell { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; padding: 92px 28px 76px; display: grid; grid-template-columns: minmax(0, .96fr) minmax(390px, .9fr); align-items: center; gap: 20px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--gold-bright); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.17em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--gold); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 690px; margin: 24px 0 22px; font-family: var(--serif); font-size: clamp(3.7rem, 7.3vw, 7.25rem); font-weight: 400; letter-spacing: -0.055em; line-height: .92; }
+    h1 em { color: var(--gold-bright); font-style: italic; }
+    .hero-copy { max-width: 590px; color: rgba(255,255,255,0.73); font-size: 1.08rem; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 30px 0 0; }
+    .meta-chip { padding: 10px 13px; border: 1px solid var(--white-line); background: rgba(255,255,255,.045); color: rgba(255,255,255,.82); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .meta-chip strong { color: var(--gold-bright); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 49px; border: 1px solid transparent; padding: 13px 18px; cursor: pointer; text-decoration: none; font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease; }
+    .btn:hover, .btn:focus-visible { transform: translateY(-2px); }
+    .btn-primary { background: var(--gold); color: var(--ink); }
+    .btn-primary:hover, .btn-primary:focus-visible { background: var(--gold-bright); }
+    .btn-ghost { border-color: rgba(255,255,255,.34); color: white; background: transparent; }
+    .btn-ghost:hover, .btn-ghost:focus-visible { border-color: var(--gold); color: var(--gold-bright); }
+    .hero-art { position: relative; min-height: 570px; display: grid; place-items: center; isolation: isolate; }
+    .hero-art::before { content: ""; position: absolute; z-index: -1; width: min(94%, 520px); height: 82%; border-radius: 50%; background: radial-gradient(ellipse, rgba(241,190,75,.30), rgba(241,207,131,.08) 48%, transparent 73%); filter: blur(16px); }
+    .hero-art img { position: relative; z-index: 1; width: min(90%, 500px); max-height: 590px; object-fit: contain; object-position: center bottom; border: 1px solid rgba(231,190,102,.28); border-radius: 4px; box-shadow: 0 24px 70px rgba(0,0,0,.52), 0 0 34px rgba(213,166,76,.16); filter: drop-shadow(0 28px 24px rgba(0,0,0,.35)); animation: trophyFloat 5.5s ease-in-out infinite; }
+    .trophy-caption { position: absolute; z-index: 2; right: 1%; bottom: 42px; max-width: 165px; color: rgba(255,255,255,.65); font-size: .68rem; letter-spacing: .12em; line-height: 1.45; text-transform: uppercase; }
+    .trophy-caption::before { content: ""; display: block; width: 40px; height: 1px; background: var(--gold); margin-bottom: 10px; }
+    @keyframes trophyFloat { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-12px) rotate(1deg); } }
+    .scroll-cue { position: absolute; bottom: 27px; left: 28px; display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,.52); font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; }
+    .scroll-cue span { width: 38px; height: 1px; background: var(--gold); }
+
+    .partner-strip { background: var(--paper-2); border-bottom: 1px solid var(--line); }
+    .partner-shell { max-width: 1240px; margin: 0 auto; padding: 22px 28px; display: grid; grid-template-columns: .75fr 1fr 1fr; align-items: center; gap: 30px; }
+    .partner-label { color: var(--muted); font-size: .67rem; letter-spacing: .16em; text-transform: uppercase; }
+    .partner { display: flex; align-items: baseline; gap: 10px; padding-left: 20px; border-left: 1px solid var(--line); }
+    .partner small { color: var(--muted); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
+    .partner strong { font-family: var(--serif); font-size: 1.25rem; font-weight: 400; }
+    .logo-partner { align-items: center; flex-wrap: wrap; gap: 8px 12px; }
+    .logo-partner img { width: auto; height: 62px; max-width: 190px; object-fit: contain; padding: 5px 9px; background: #fff; border: 1px solid rgba(16,26,42,.10); border-radius: 3px; box-shadow: 0 5px 16px rgba(16,26,42,.10); }
+    .logo-partner small { flex-basis: 100%; }
+    .logo-partner strong { font-size: 1.05rem; }
+
+    section { padding: 112px 28px; }
+    .section-shell { max-width: 1240px; margin: 0 auto; }
+    .section-kicker { color: #9d742d; font-size: .7rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+    .section-heading { max-width: 820px; margin: 17px 0 20px; font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 5.8rem); font-weight: 400; letter-spacing: -.045em; line-height: .96; }
+    .section-heading em { color: #a77b30; font-style: italic; }
+    .section-intro { max-width: 650px; color: #677384; font-size: 1.02rem; }
+    .story { background: var(--paper); }
+    .story-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 100px; align-items: end; }
+    .story-note { position: relative; padding: 30px; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--line); }
+    .story-note::before { content: "“"; position: absolute; top: -25px; left: 24px; color: var(--gold); font-family: var(--serif); font-size: 6rem; line-height: 1; }
+    .story-note p { position: relative; margin: 24px 0 25px; font-family: var(--serif); font-size: 2rem; line-height: 1.08; }
+    .story-note small { color: var(--muted); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
+    .story-points { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 50px; }
+    .point { padding: 22px 0; border-top: 1px solid var(--line); }
+    .point-number { color: var(--gold); font-size: .7rem; font-weight: 700; letter-spacing: .12em; }
+    .point h3 { margin: 14px 0 8px; font-size: 1rem; }
+    .point p { margin: 0; color: var(--muted); font-size: .87rem; }
+
+    .category-section { color: white; background: var(--ink); position: relative; overflow: hidden; }
+    .category-section::after { content: "BUSINESS"; position: absolute; right: -50px; bottom: -30px; color: rgba(255,255,255,.025); font-size: clamp(8rem, 22vw, 20rem); font-weight: 700; letter-spacing: -.08em; line-height: .7; pointer-events: none; }
+    .category-section .section-shell { position: relative; z-index: 1; }
+    .category-section .section-kicker { color: var(--gold-bright); }
+    .category-section .section-intro { color: rgba(255,255,255,.62); }
+    .category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 54px; border-top: 1px solid var(--white-line); border-left: 1px solid var(--white-line); }
+    .category-card { min-height: 158px; padding: 24px; border-right: 1px solid var(--white-line); border-bottom: 1px solid var(--white-line); transition: background .25s ease, transform .25s ease; }
+    .category-card:hover { background: rgba(241,207,131,.08); transform: translateY(-4px); }
+    .category-card:nth-child(3n+1) { background: rgba(255,255,255,.025); }
+    .category-index { color: var(--gold); font-size: .68rem; font-weight: 700; letter-spacing: .14em; }
+    .category-card h3 { max-width: 180px; margin: 33px 0 0; font-family: var(--serif); font-size: 1.45rem; font-weight: 400; line-height: 1.02; }
+
+    .experience { background: var(--paper-2); }
+    .experience-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 80px; align-items: start; }
+    .experience-list { margin-top: 40px; border-top: 1px solid var(--line); }
+    .experience-item { display: grid; grid-template-columns: 75px 1fr; gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .experience-item b { color: var(--gold); font-size: .76rem; letter-spacing: .12em; }
+    .experience-item h3 { margin: 0 0 6px; font-size: 1.1rem; }
+    .experience-item p { margin: 0; color: var(--muted); font-size: .88rem; }
+    .date-card { position: sticky; top: 115px; padding: 34px; color: white; background: linear-gradient(140deg, var(--ink), var(--ink-3)); box-shadow: var(--shadow); overflow: hidden; }
+    .date-card::after { content: "2026"; position: absolute; right: -10px; bottom: -23px; color: rgba(255,255,255,.05); font-size: 8rem; font-weight: 700; letter-spacing: -.08em; }
+    .date-card .eyebrow { position: relative; z-index: 1; }
+    .date-card h3 { position: relative; z-index: 1; margin: 32px 0 8px; font-family: var(--serif); font-size: 3.4rem; font-weight: 400; line-height: .9; }
+    .date-card p { position: relative; z-index: 1; color: rgba(255,255,255,.63); font-size: .9rem; }
+    .date-card hr { position: relative; z-index: 1; margin: 30px 0; border: 0; border-top: 1px solid var(--white-line); }
+    .date-card .date-line { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 15px; padding: 10px 0; color: rgba(255,255,255,.7); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; }
+    .date-card .date-line strong { color: var(--gold-bright); font-weight: 600; }
+
+    .sponsor-section { background: var(--paper); }
+    .sponsor-header { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
+    .sponsor-header .section-intro { margin-bottom: 8px; }
+    .package-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 54px; }
+    .package { position: relative; min-height: 208px; padding: 24px; border: 1px solid var(--line); background: rgba(255,255,255,.52); transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+    .package:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 16px 32px rgba(16,26,42,.08); }
+    .package.featured { color: white; background: var(--ink); border-color: var(--ink); box-shadow: var(--shadow); }
+    .package.featured::before { content: "PRIORITY PARTNER"; position: absolute; top: 0; right: 0; padding: 6px 9px; color: var(--ink); background: var(--gold); font-size: .56rem; font-weight: 700; letter-spacing: .12em; }
+    .package .package-no { color: var(--gold); font-size: .67rem; font-weight: 700; letter-spacing: .14em; }
+    .package h3 { margin: 32px 0 8px; font-family: var(--serif); font-size: 1.38rem; font-weight: 400; line-height: 1; }
+    .package p { margin: 0; color: var(--muted); font-size: .82rem; }
+    .package.featured p { color: rgba(255,255,255,.62); }
+    .package-link { display: inline-block; margin-top: 23px; color: #9d742d; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
+    .package.featured .package-link { color: var(--gold-bright); }
+
+    .forms-section { background: var(--paper-2); }
+    .forms-intro { max-width: 690px; }
+    .form-layout { display: grid; grid-template-columns: .75fr 1.25fr; gap: 18px; margin-top: 54px; align-items: start; }
+    .form-aside { padding: 30px; color: white; background: var(--ink); }
+    .form-aside h3 { margin: 20px 0 13px; font-family: var(--serif); font-size: 2.5rem; font-weight: 400; line-height: .98; }
+    .form-aside p { color: rgba(255,255,255,.63); font-size: .86rem; }
+    .form-aside ul { display: grid; gap: 12px; padding: 22px 0 0; margin: 26px 0 0; border-top: 1px solid var(--white-line); list-style: none; }
+    .form-aside li { display: flex; gap: 10px; color: rgba(255,255,255,.72); font-size: .78rem; }
+    .form-aside li::before { content: "✦"; color: var(--gold); }
+    .form-card { padding: 30px; border: 1px solid var(--line); background: white; box-shadow: 0 14px 36px rgba(16,26,42,.05); }
+    .form-card h3 { margin-bottom: 6px; font-family: var(--serif); font-size: 2.05rem; font-weight: 400; }
+    .form-card > p { margin-bottom: 24px; color: var(--muted); font-size: .85rem; }
+    form { display: grid; gap: 15px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    label { color: var(--ink); font-size: .69rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    input, select, textarea { display: block; width: 100%; margin-top: 6px; border: 1px solid #d6dce3; border-radius: 0; padding: 12px 13px; color: var(--ink); background: #fbfbfa; outline: none; font-size: .86rem; letter-spacing: 0; text-transform: none; transition: border-color .2s ease, box-shadow .2s ease; }
+    input:focus, select:focus, textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(210,166,81,.16); }
+    textarea { min-height: 102px; resize: vertical; }
+    .consent { display: flex; align-items: flex-start; gap: 8px; color: var(--muted); font-size: .7rem; font-weight: 400; letter-spacing: 0; line-height: 1.35; text-transform: none; }
+    .consent input { width: auto; margin: 1px 0 0; accent-color: var(--gold); }
+    .form-note { margin: 2px 0 0; color: var(--muted); font-size: .69rem; }
+    .form-message { display: none; margin: 2px 0 0; padding: 10px 12px; background: #edf6ef; color: #356a40; font-size: .75rem; }
+    .form-message.show { display: block; }
+    .submit-btn { width: 100%; border: 0; background: var(--ink); color: white; }
+    .submit-btn:hover, .submit-btn:focus-visible { background: var(--ink-3); }
+    .nomination-layout { margin-top: 28px; }
+    .nomination-aside { background: linear-gradient(145deg, #0b1422 0%, #1b334d 100%); }
+    .nomination-card { position: relative; overflow: hidden; border-top: 3px solid var(--gold); box-shadow: 0 24px 70px rgba(16,26,42,.12); }
+    .nomination-card::after { content: "BA26"; position: absolute; right: -8px; top: 8px; color: rgba(16,26,42,.035); font-family: var(--serif); font-size: 7rem; line-height: .8; pointer-events: none; }
+    .nomination-card h3, .nomination-card > p, .nomination-card form { position: relative; z-index: 1; }
+    .form-event-note { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; }
+    .form-event-note span { padding: 7px 10px; border: 1px solid rgba(210,166,81,.45); color: #9d742d; font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .guest-section { background: var(--paper); }
+    .guest-header { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
+    .guest-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; margin-top: 54px; }
+    .guest-panel { padding: 30px; border: 1px solid var(--line); background: rgba(255,255,255,.56); }
+    .guest-panel.dark { color: white; background: var(--ink); border-color: var(--ink); }
+    .guest-panel h3 { margin: 0 0 22px; font-family: var(--serif); font-size: 2rem; font-weight: 400; line-height: 1; }
+    .guest-panel.dark h3 { color: var(--gold-bright); }
+    .guest-role { display: block; margin-bottom: 18px; color: var(--gold); font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .guest-list { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+    .guest-list li { display: flex; justify-content: space-between; gap: 18px; padding: 14px 0; border-top: 1px solid var(--line); font-size: .9rem; }
+    .dark .guest-list li { border-color: var(--white-line); color: rgba(255,255,255,.82); }
+    .guest-list li strong { font-weight: 600; }
+    .guest-list li span { color: var(--muted); font-size: .78rem; text-align: right; }
+    .dark .guest-list li span { color: rgba(255,255,255,.56); }
+
+    .contact-section { position: relative; overflow: hidden; color: white; background: var(--ink); text-align: center; }
+    .contact-section::before { content: ""; position: absolute; width: 520px; height: 520px; left: 50%; top: 50%; border: 1px solid rgba(241,207,131,.17); border-radius: 50%; transform: translate(-50%,-50%); box-shadow: 0 0 0 28px rgba(241,207,131,.025), 0 0 0 56px rgba(241,207,131,.02); }
+    .contact-section .section-shell { position: relative; z-index: 1; }
+    .contact-section .section-kicker { color: var(--gold-bright); }
+    .contact-section .section-heading { margin-left: auto; margin-right: auto; }
+    .contact-section p { color: rgba(255,255,255,.64); }
+    .contact-number { display: block; margin: 25px 0 29px; color: var(--gold-bright) !important; font-family: var(--serif); font-size: 2.2rem; text-decoration: none; }
+    .contact-footnote { margin: 22px auto 0; max-width: 500px; color: rgba(255,255,255,.42) !important; font-size: .72rem; }
+    footer { padding: 28px; color: rgba(255,255,255,.55); background: #0a111d; font-size: .7rem; text-align: center; }
+    footer strong { color: var(--gold-bright); font-weight: 600; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    :focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; }
+
+
+    /* Click-to-open enquiry forms */
+    .nav-action-group { display:flex; align-items:center; gap:9px; }
+    .nav-action { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:10px 13px; border:1px solid var(--gold); color:var(--gold-bright)!important; background:rgba(210,166,81,.08); text-decoration:none; font-size:.69rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; white-space:nowrap; }
+    .nav-action.sponsor { background:var(--gold); color:var(--ink)!important; }
+    .nav-action:hover { background:var(--gold-bright); color:var(--ink)!important; }
+    .hero-actions .btn { min-width:205px; }
+    .modal-backdrop { position:fixed; inset:0; z-index:1000; display:none; align-items:center; justify-content:center; padding:20px; background:rgba(4,10,19,.78); backdrop-filter:blur(8px); }
+    .modal-backdrop.is-open { display:flex; }
+    .form-modal { padding:0; position:relative; width:min(760px,100%); max-height:min(90vh,900px); overflow:auto; background:var(--paper); border:1px solid rgba(210,166,81,.75); box-shadow:0 28px 90px rgba(0,0,0,.48); }
+    .modal-head { position:sticky; top:0; z-index:3; display:flex; align-items:flex-start; justify-content:space-between; gap:20px; padding:23px 27px 19px; color:white; background:linear-gradient(120deg,#0b1422,#1b334d); border-bottom:2px solid var(--gold); }
+    .modal-head .section-kicker { color:var(--gold-bright); }
+    .modal-head h2 { margin:5px 0 0; font:400 clamp(1.8rem,4vw,2.5rem)/1.05 var(--serif); }
+    .modal-close { flex:0 0 auto; width:40px; height:40px; border:1px solid rgba(255,255,255,.35); border-radius:50%; color:white; background:transparent; font-size:1.5rem; line-height:1; cursor:pointer; }
+    .modal-close:hover { color:var(--ink); background:var(--gold-bright); border-color:var(--gold-bright); }
+    .modal-body { padding:25px 27px 28px; }
+    .modal-body > p { color:#677384; font-size:.85rem; margin-bottom:20px; }
+    .modal-body form { display:grid; gap:15px; }
+    .modal-body .submit-btn { width:100%; background:var(--gold); color:var(--ink); }
+    .modal-body .submit-btn:hover { background:var(--gold-bright); }
+    .modal-status { display:none; padding:13px 15px; margin-top:14px; color:#245b35; background:#e8f4eb; border-left:3px solid #4e9a64; font-size:.85rem; }
+    .modal-status.show { display:block; }
+    .modal-note { color:#7d8796; font-size:.72rem; margin:0; }
+    body.modal-open { overflow:hidden; }
+    @media(max-width:980px) { .nav-action-group { gap:6px; } .nav-action { padding:9px 10px; font-size:.62rem; } }
+    @media(max-width:700px) {
+      .nav-links .nav-action-group { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding-top:10px; margin-top:8px; border-top:1px solid var(--white-line); }
+      .nav-links .nav-action { min-height:44px; white-space:normal; text-align:center; }
+      .hero-actions { display:grid; grid-template-columns:1fr; }
+      .hero-actions .btn { width:100%; }
+      .modal-backdrop { padding:8px; align-items:flex-end; }
+      .form-modal { max-height:94vh; }
+      .modal-head { padding:18px 17px 15px; }
+      .modal-body { padding:19px 16px 22px; }
+    }
+
+    @media (max-width: 980px) {
+      .hero-shell, .story-grid, .experience-grid, .form-layout { grid-template-columns: 1fr; }
+      .hero-shell { padding-top: 65px; }
+      .hero-art { min-height: 420px; order: -1; }
+      .hero-art img { width: min(65%, 380px); }
+      .story-grid, .experience-grid { gap: 48px; }
+      .date-card { position: relative; top: auto; }
+      .category-grid { grid-template-columns: repeat(3, 1fr); }
+      .package-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-aside { display: grid; grid-template-columns: .8fr 1.2fr; gap: 24px; }
+      .form-aside ul { margin-top: 0; }
+      .guest-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      .topline { font-size: .61rem; letter-spacing: .1em; }
+      .nav-shell { padding: 13px 18px; }
+      .nav-toggle { display: grid; place-items: center; }
+      .nav-links { position: absolute; left: 14px; right: 14px; top: calc(100% + 8px); display: none; padding: 16px; flex-direction: column; align-items: stretch; gap: 2px; border: 1px solid var(--white-line); background: rgba(16,26,42,.98); box-shadow: var(--shadow); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 10px; }
+      .nav-cta { text-align: center; }
+      .hero { min-height: auto; }
+      .hero-shell { padding: 56px 18px 80px; }
+      h1 { font-size: clamp(3.35rem, 17vw, 5rem); }
+      .hero-copy { font-size: .96rem; }
+      .hero-art { min-height: 360px; }
+      .hero-art img { width: min(76%, 315px); }
+      .trophy-caption { right: 0; bottom: 14px; max-width: 125px; font-size: .57rem; }
+      .scroll-cue { display: none; }
+      .partner-shell { grid-template-columns: 1fr; gap: 16px; padding: 20px 18px; }
+      .partner { padding-left: 14px; }
+      section { padding: 78px 18px; }
+      .section-heading { font-size: clamp(2.7rem, 13vw, 4rem); }
+      .story-note p { font-size: 1.65rem; }
+      .story-points { grid-template-columns: 1fr; margin-top: 25px; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); margin-top: 36px; }
+      .category-card { min-height: 130px; padding: 17px; }
+      .category-card h3 { margin-top: 24px; font-size: 1.18rem; }
+      .experience-item { grid-template-columns: 50px 1fr; gap: 12px; }
+      .sponsor-header { display: block; }
+      .package-grid { grid-template-columns: 1fr; margin-top: 32px; }
+      .form-aside { display: block; }
+      .form-aside ul { margin-top: 26px; }
+      .form-card { padding: 22px 17px; }
+      .form-row { grid-template-columns: 1fr; gap: 15px; }
+      .contact-number { font-size: 1.55rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline">Business Award 2026 · 30 November 2026 · Monday · 10:00 AM · Radisson Blu Hotel, Bangalore</div>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Business Award 2026 home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-word">BUSINESS AWARD <span>2026 · BANGALORE</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#story">The platform</a>
+        <a href="#categories">Categories</a>
+        <a href="#guests">Guests</a>
+        <a href="#sponsor">Partners</a>
+        <div class="nav-action-group">
+          <button class="nav-action" type="button" data-open-form="nominationModal">Nominate Now</button>
+          <button class="nav-action sponsor" type="button" data-open-form="sponsorModal">Become a Sponsor</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-shell">
+        <div class="hero-copy-block reveal">
+          <span class="eyebrow">A platform for ambitious businesses</span>
+          <h1>Business<br /><em>Award 2026</em></h1>
+          <p class="hero-copy">Recognising growth. Celebrating success. A distinguished stage for the founders, companies and ideas shaping Karnataka's next chapter.</p>
+          <div class="hero-meta">
+            <span class="meta-chip"><strong>01</strong> Bangalore</span>
+            <span class="meta-chip"><strong>02</strong> 30 November 2026</span>
+            <span class="meta-chip"><strong>03</strong> Radisson Blu Hotel</span>
+          </div>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-open-form="nominationModal">Nominate Now <span>↗</span></button>
+            <button class="btn btn-ghost" type="button" data-open-form="sponsorModal">Become a Sponsor <span>↗</span></button>
+          </div>
+        </div>
+        <div class="hero-art reveal" aria-label="Golden awards trophy">
+          <img src="assets/award-trophy-hero.png" alt="Premium golden Business Award trophy and certificate" />
+          <div class="trophy-caption">For the businesses building what comes next.</div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span></span> Explore the platform</div>
+    </section>
+
+    <div class="partner-strip">
+      <div class="partner-shell">
+        <div class="partner-label">Our organisers</div>
+        <div class="partner logo-partner"><small>Presented by</small><img src="assets/chitra-sante-logo.png" alt="Chitra Sante logo" /><strong>Chitra Sante &amp; Associates</strong></div>
+        <div class="partner logo-partner"><small>In association with</small><img src="assets/eaglereach-marketing-logo.png" alt="EagleReach Marketing logo" /><strong>EagleReach Marketing</strong></div>
+      </div>
+    </div>
+
+    <section class="story" id="story">
+      <div class="section-shell story-grid">
+        <div class="reveal">
+          <span class="section-kicker">A stage for growing businesses</span>
+          <h2 class="section-heading">Recognition with <em>real momentum.</em></h2>
+          <p class="section-intro">An entrepreneur-focused recognition and networking platform designed to spotlight business achievement, share founder stories and connect ambitious companies across Karnataka.</p>
+          <div class="story-points">
+            <article class="point"><span class="point-number">01 / FOUNDERS</span><h3>Put your progress in the spotlight.</h3><p>Share the story behind your growth with a platform built for businesses on the rise.</p></article>
+            <article class="point"><span class="point-number">02 / NETWORK</span><h3>Meet the people moving Karnataka forward.</h3><p>Connect with a curated business audience through recognition and meaningful conversations.</p></article>
+          </div>
+        </div>
+          <aside class="story-note reveal"><p>Big businesses often begin as brave decisions. This is a stage for the ones making them.</p><small>Business Award 2026</small></aside>
+      </div>
+    </section>
+
+    <section class="category-section" id="categories">
+      <div class="section-shell">
+        <div class="reveal"><span class="section-kicker">16 award categories</span><h2 class="section-heading">Every kind of <em>progress</em> deserves a room.</h2><p class="section-intro">From first-time founders to enduring local businesses, the categories are designed to reflect the range and ambition of Karnataka's business community.</p></div>
+        <div class="category-grid reveal">
+          <article class="category-card"><span class="category-index">01</span><h3>Emerging Business</h3></article>
+          <article class="category-card"><span class="category-index">02</span><h3>Innovation / Product or Service</h3></article>
+          <article class="category-card"><span class="category-index">03</span><h3>Customer Experience</h3></article>
+          <article class="category-card"><span class="category-index">04</span><h3>Women-led Business</h3></article>
+          <article class="category-card"><span class="category-index">05</span><h3>Young Entrepreneur</h3></article>
+          <article class="category-card"><span class="category-index">06</span><h3>Manufacturing / Local Production</h3></article>
+          <article class="category-card"><span class="category-index">07</span><h3>Food / Consumer Brand</h3></article>
+          <article class="category-card"><span class="category-index">08</span><h3>Technology / Digital</h3></article>
+          <article class="category-card"><span class="category-index">09</span><h3>Community Impact / Sustainability</h3></article>
+          <article class="category-card"><span class="category-index">10</span><h3>Professional Services</h3></article>
+          <article class="category-card"><span class="category-index">11</span><h3>Startup of the Year</h3></article>
+          <article class="category-card"><span class="category-index">12</span><h3>MSME Excellence</h3></article>
+          <article class="category-card"><span class="category-index">13</span><h3>Export Excellence</h3></article>
+          <article class="category-card"><span class="category-index">14</span><h3>Retail &amp; Service Excellence</h3></article>
+          <article class="category-card"><span class="category-index">15</span><h3>Family Business Excellence</h3></article>
+          <article class="category-card"><span class="category-index">16</span><h3>Entrepreneur of the Year</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience">
+      <div class="section-shell experience-grid">
+        <div class="reveal"><span class="section-kicker">Why this platform</span><h2 class="section-heading">A night of <em>visibility,</em> connection and pride.</h2><p class="section-intro">An awards experience built to do more than hand out trophies — it gives ambitious businesses a sharper story, a stronger network and a memorable moment.</p>
+          <div class="experience-list">
+            <article class="experience-item"><b>01</b><div><h3>Be seen for the work behind the growth.</h3><p>Put your business, people and point of view in front of a relevant, entrepreneurial audience.</p></div></article>
+            <article class="experience-item"><b>02</b><div><h3>Share a room with fellow builders.</h3><p>Create new conversations across categories, sectors and stages of business.</p></div></article>
+            <article class="experience-item"><b>03</b><div><h3>Leave with a story worth retelling.</h3><p>Celebrate the progress that deserves to be remembered — and the momentum still ahead.</p></div></article>
+          </div>
+        </div>
+        <aside class="date-card reveal"><span class="eyebrow">The awards evening</span><h3>30 November<br /><em>2026</em></h3><p>Monday · 10:00 AM<br />Radisson Blu Hotel, Bangalore</p><hr /><div class="date-line"><span>Format</span><strong>Awards + networking</strong></div><div class="date-line"><span>Location</span><strong>Bangalore</strong></div><div class="date-line"><span>Venue</span><strong>Radisson Blu Hotel</strong></div></aside>
+      </div>
+    </section>
+
+    <section class="guest-section" id="guests">
+      <div class="section-shell">
+        <div class="guest-header reveal"><div><span class="section-kicker">A distinguished room</span><h2 class="section-heading">Honoured guests.<br /><em>Exceptional company.</em></h2></div><p class="section-intro">The Business Award 2026 brings together public leadership, business builders and celebrated voices for one memorable evening in Bangalore.</p></div>
+        <div class="guest-grid reveal">
+          <article class="guest-panel"><span class="guest-role">Guest of Honour · Karnataka Ministers</span><h3>Leadership that shapes Karnataka</h3><ul class="guest-list"><li><strong>Sri Krishna Byregowda</strong><span>Minister for Greater Bengaluru Development</span></li><li><strong>Sri Cheluvarayaswamy</strong><span>Minister for Major and Medium Irrigation</span></li><li><strong>Sri Santosh Lad</strong><span>Minister for Labour and Employment</span></li><li><strong>Sri U. T. Khader</strong><span>Minister for Health and Family Welfare</span></li></ul></article>
+          <article class="guest-panel dark"><span class="guest-role">Celebrity Guests</span><h3>Celebrated voices joining the evening</h3><ul class="guest-list"><li><strong>Sri Shashi Kumar</strong><span>Celebrity Guest</span></li><li><strong>Smt. Priyanka Upendra</strong><span>Celebrity Guest</span></li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sponsor-section" id="sponsor">
+      <div class="section-shell">
+        <div class="sponsor-header reveal"><div><span class="section-kicker">Partner with the awards</span><h2 class="section-heading">Put your brand where <em>business moves.</em></h2></div><p class="section-intro">Sponsorship opportunities are subject to availability and written agreement. Partnership details and commercials will be discussed separately based on your objectives.</p></div>
+        <div class="package-grid reveal">
+          <article class="package featured"><span class="package-no">01 / FLAGSHIP</span><h3>Title Sponsor</h3><p>Premium event association with the strongest brand presence.</p><a class="package-link" href="#sponsor" data-open-form="sponsorModal">Discuss this package ↗</a></article>
+          <article class="package"><span class="package-no">02 / LEAD</span><h3>Powered By Partner</h3><p>Prominent brand presence across the awards platform.</p><a class="package-link" href="#sponsor" data-open-form="sponsorModal">Enquire ↗</a></article>
+          <article class="package"><span class="package-no">03 / PRESENCE</span><h3>Associate Sponsor</h3><p>Supporting partner visibility across the event experience.</p><a class="package-link" href="#sponsor" data-open-form="sponsorModal">Enquire ↗</a></article>
+          <article class="package"><span class="package-no">04 / GROWTH</span><h3>Growth Partner</h3><p>Growth-stage brand visibility for the right audience.</p><a class="package-link" href="#sponsor" data-open-form="sponsorModal">Enquire ↗</a></article>
+          <article class="package"><span class="package-no">05 / CATEGORY</span><h3>Category Partner</h3><p>Category-level acknowledgement and association.</p><a class="package-link" href="#sponsor" data-open-form="sponsorModal">Enquire ↗</a></article>
+          <article class="package"><span class="package-no">06 / COMMUNITY</span><h3>Community Partner</h3><p>Community partner presence with a meaningful role.</p><a class="package-link" href="#sponsor" data-open-form="sponsorModal">Enquire ↗</a></article>
+          <article class="package"><span class="package-no">07 / SHOWCASE</span><h3>Exhibition Booth</h3><p>Product or service showcase for a business audience.</p><a class="package-link" href="#sponsor" data-open-form="sponsorModal">Enquire ↗</a></article>
+          <article class="package"><span class="package-no">08 / NETWORK</span><h3>Business Networking Table</h3><p>Business networking presence built for conversation.</p><a class="package-link" href="#sponsor" data-open-form="sponsorModal">Enquire ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="section-shell reveal"><span class="section-kicker">Let's connect</span><h2 class="section-heading">Good things happen when the right businesses share a room.</h2><p>Sponsorship, entries and event enquiries</p><a class="contact-number" href="tel:+919180286824">+91 91802 86824</a><a class="btn btn-primary" href="https://wa.me/919180286824?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Business%20Award%202026.">Chat on WhatsApp ↗</a><p class="contact-footnote">30 November 2026 · Monday · 10:00 AM · Radisson Blu Hotel, Bangalore · Entries do not assure an award.</p></div>
+    </section>
+  </main>
+
+
+  <!-- Forms open only after an explicit button click. -->
+  <div class="modal-backdrop" id="sponsorModal" aria-hidden="true">
+    <section class="form-modal" role="dialog" aria-modal="true" aria-labelledby="sponsorModalTitle">
+      <div class="modal-head"><div><span class="section-kicker">Partnership enquiry</span><h2 id="sponsorModalTitle">Become a Sponsor</h2></div><button class="modal-close" type="button" data-close-form aria-label="Close sponsorship form">×</button></div>
+      <div class="modal-body"><p>Tell us about your organisation and partnership goals. Our team will contact you to discuss suitable opportunities.</p>
+        <form id="sponsorForm" method="post" target="formResponseFrame" novalidate>
+          <input type="hidden" name="formType" value="Sponsorship Enquiry" />
+          <div class="form-row"><label>Company / Brand *<input name="Company" autocomplete="organization" required maxlength="120" /></label><label>Contact person *<input name="Contact person" autocomplete="name" required maxlength="100" /></label></div>
+          <div class="form-row"><label>Mobile *<input name="Mobile" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+()\s-]{8,18}" required /></label><label>Email *<input name="Email" type="email" autocomplete="email" required /></label></div>
+          <div class="form-row"><label>Business category<input name="Business category" maxlength="100" /></label><label>Package / interest *<select name="Package" required><option value="">Choose an option</option><option>Title Sponsor</option><option>Powered By Partner</option><option>Associate Sponsor</option><option>Growth Partner</option><option>Category Partner</option><option>Community Partner</option><option>Exhibition Booth</option><option>Business Networking Table</option><option>Other / Need details</option></select></label></div>
+          <label>Website / social link<input name="Website or social link" type="url" placeholder="https://" /></label>
+          <label>Partnership objectives<textarea name="Objectives" rows="3" maxlength="1500" placeholder="Tell us what you would like to achieve"></textarea></label>
+          <label class="consent"><input type="checkbox" name="Consent" value="Yes" required /> <span>I agree to be contacted about this sponsorship enquiry.</span></label>
+          <button class="btn submit-btn" type="submit">Submit Sponsorship Enquiry <span>↗</span></button>
+          <p class="modal-note">Your details will be sent securely to the event administrator. You can close this form without submitting.</p>
+          <div class="modal-status" id="sponsorMessage" role="status" aria-live="polite">Thank you. Your sponsorship enquiry has been submitted successfully.</div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="nominationModal" aria-hidden="true">
+    <section class="form-modal" role="dialog" aria-modal="true" aria-labelledby="nominationModalTitle">
+      <div class="modal-head"><div><span class="section-kicker">Business recognition</span><h2 id="nominationModalTitle">Nominate Your Business</h2></div><button class="modal-close" type="button" data-close-form aria-label="Close nomination form">×</button></div>
+      <div class="modal-body"><p>Share your business story and achievements for consideration. Submission does not guarantee selection or an award.</p>
+        <div class="form-event-note"><span>30 November 2026</span><span>Bangalore</span></div>
+        <form id="nominationForm" method="post" target="formResponseFrame" novalidate>
+          <input type="hidden" name="formType" value="Business Award Nomination" />
+          <div class="form-row"><label>Business name *<input name="Business name" autocomplete="organization" required maxlength="150" /></label><label>Founder / owner *<input name="Founder or owner" autocomplete="name" required maxlength="120" /></label></div>
+          <div class="form-row"><label>Mobile *<input name="Mobile" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+()\s-]{8,18}" required /></label><label>Email *<input name="Email" type="email" autocomplete="email" required /></label></div>
+          <div class="form-row"><label>City / district *<input name="City or district" required maxlength="100" /></label><label>Year started<input name="Year started" type="number" min="1900" max="2026" /></label></div>
+          <div class="form-row"><label>Business category *<select name="Category" required><option value="">Choose a category</option><option>Emerging Business</option><option>Innovation / Product or Service</option><option>Customer Experience</option><option>Women-led Business</option><option>Young Entrepreneur</option><option>Manufacturing / Local Production</option><option>Food / Consumer Brand</option><option>Technology / Digital</option><option>Community Impact / Sustainability</option><option>Professional Services</option><option>Startup of the Year</option><option>MSME Excellence</option><option>Export Excellence</option><option>Retail &amp; Service Excellence</option><option>Family Business Excellence</option><option>Entrepreneur of the Year</option></select></label><label>Website / social link<input name="Website or social link" type="url" placeholder="https://" /></label></div>
+          <label>Key achievements and business impact *<textarea name="Achievements" rows="3" required maxlength="2500"></textarea></label>
+          <label>Why should your business be considered? *<textarea name="Reason" rows="3" required maxlength="2000"></textarea></label>
+          <label class="consent"><input type="checkbox" name="Consent" value="Yes" required /> <span>I confirm the information is accurate and agree to be contacted about this nomination.</span></label>
+          <button class="btn submit-btn" type="submit">Submit Nomination <span>↗</span></button>
+          <p class="modal-note">Please do not include confidential financial, customer or sensitive personal information. You can close this form without submitting.</p>
+          <div class="modal-status" id="nominationMessage" role="status" aria-live="polite">Thank you. Your nomination has been submitted successfully.</div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <iframe name="formResponseFrame" id="formResponseFrame" title="Form submission response" hidden></iframe>
+
+  <footer>© 2026 <strong>Business Award 2026</strong> · Chitra Sante &amp; Associates · EagleReach Marketing</footer>
+  <script>
+    const APPS_SCRIPT_WEB_APP_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('#navLinks');
+    navToggle?.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+    navLinks?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      navLinks.classList.remove('open'); navToggle?.setAttribute('aria-expanded', 'false');
+    }));
+    const observe = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observe.unobserve(entry.target); }
+    }), { threshold: 0.14 });
+    document.querySelectorAll('.reveal').forEach((el) => observe.observe(el));
+
+    let activeModal = null, lastFocusedElement = null, pendingForm = null;
+    function openForm(id) {
+      const modal = document.getElementById(id); if (!modal) return;
+      lastFocusedElement = document.activeElement; activeModal = modal;
+      modal.classList.add('is-open'); modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      modal.querySelector('.modal-close')?.focus();
+    }
+    function closeForm(modal = activeModal) {
+      if (!modal) return;
+      if (pendingForm && modal.contains(pendingForm)) return;
+      modal.classList.remove('is-open'); modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open'); activeModal = null;
+      lastFocusedElement?.focus();
+    }
+    document.querySelectorAll('[data-open-form]').forEach(button => button.addEventListener('click', event => {
+      event.preventDefault();
+      navLinks?.classList.remove('open'); navToggle?.setAttribute('aria-expanded', 'false');
+      openForm(button.dataset.openForm);
+    }));
+    document.querySelectorAll('[data-close-form]').forEach(button => button.addEventListener('click', () => closeForm(button.closest('.modal-backdrop'))));
+    document.querySelectorAll('.modal-backdrop').forEach(modal => {
+      modal.addEventListener('click', event => { if (event.target === modal) closeForm(modal); });
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && activeModal) closeForm();
+      if (event.key === 'Tab' && activeModal) {
+        const focusable = [...activeModal.querySelectorAll('button, input, select, textarea, a[href]')].filter(el => !el.disabled && el.offsetParent !== null);
+        if (!focusable.length) return;
+        const first = focusable[0], last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    });
+
+    const responseFrame = document.getElementById('formResponseFrame');
+    let ignoreInitialFrameLoad = true;
+    responseFrame.addEventListener('load', () => {
+      if (ignoreInitialFrameLoad) { ignoreInitialFrameLoad = false; return; }
+      if (!pendingForm) return;
+      const form = pendingForm;
+      const status = form.querySelector('.modal-status');
+      status?.classList.add('show');
+      status?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      form.querySelectorAll('input,select,textarea,button[type="submit"]').forEach(el => { if (el.type !== 'hidden') el.disabled = true; });
+      pendingForm = null;
+      const modal = form.closest('.modal-backdrop');
+      const close = modal?.querySelector('.modal-close');
+      if (close) { close.textContent = '×'; close.setAttribute('aria-label', 'Close form'); }
+    });
+
+    ['sponsorForm','nominationForm'].forEach(id => {
+      const form = document.getElementById(id);
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        form.querySelectorAll('input,select,textarea').forEach(el => el.setCustomValidity(''));
+        if (!form.reportValidity()) return;
+        const mobile = form.elements.namedItem('Mobile');
+        if (mobile && mobile.value.replace(/\D/g, '').length < 8) { mobile.setCustomValidity('Please enter a valid mobile number.'); mobile.reportValidity(); return; }
+        if (!APPS_SCRIPT_WEB_APP_URL.startsWith('https://script.google.com/macros/s/')) {
+          alert('The form is ready, but the administrator must connect the Google Sheets form endpoint before submissions can be received. Please contact the event team.');
+          return;
+        }
+        form.action = APPS_SCRIPT_WEB_APP_URL;
+        pendingForm = form;
+        form.querySelectorAll('input,select,textarea,button[type="submit"]').forEach(el => { el.disabled = false; });
+        form.submit();
+      });
+    });
+  </script>
+</body>
+</html>
